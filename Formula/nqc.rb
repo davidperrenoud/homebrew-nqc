@@ -13,6 +13,6 @@ class Nqc < Formula
   end
 
   test do
-    system "#{bin}/nqc"
+    system "#{bin}/nqc", "-help"
   end
 end
