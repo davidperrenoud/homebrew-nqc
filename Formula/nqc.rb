@@ -10,11 +10,12 @@ class Nqc < Formula
     root_url "https://github.com/davidperrenoud/homebrew-nqc/releases/download/nqc-3.2r1"
     sha256 cellar: :any_skip_relocation, monterey: "d705c6381ec6bd746b9383f7a6a8335d0029a1c0c6ebe51d3aaf9a7d4cbb9ee4"
   end
+
   depends_on :macos
 
   def install
     ENV.deparallelize
-    system "make", "install", "PREFIX=#{prefix}", "MANDIR=#{man}"
+    system "make", "install", "PREFIX=#{prefix}", "MANDIR=#{man}/man1"
   end
 
   test do
